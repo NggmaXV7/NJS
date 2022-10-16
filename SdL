@@ -1,0 +1,27 @@
+--// !Nggma X V7! \\--
+getgenv().Settings =  {
+    --// !Main! \\--
+    ['Owner'] = 'Owner User Name HERE', -- 조종자 로블록스 닉네임
+    ['Position'] = 'Back', -- 스탠드의 포지션 [Back! / Left! / Right!]
+    ['Attack'] = 'Heavy!', -- Heavy!로 할 시 차지 공격 Light!로 설정 할 시 주먹 을 연타 합니다 [Heavy! / Light!]
+    ['CrewID'] = '1', -- 작동하려면 조종 계정 스탠드 계정들 둘 다 같은 그룹에 가입 해야 합니다 [그룹 코드는 알아서]
+    ['SynapseMode'] = 'On', -- [On / Off] 켜져 있으면 스탠드가 너무 많이 버그가 발생하지 않습니다.
+    ['StandMode'] = 'Star Platinum', -- [Star Platinum / Cream / D4C / CMOON] 스탠드 사운드 및 모드
+
+    --// ! Misc ! \\--
+    ['FPSCAP'] = '60', -- 이것은 당신의 조종 계정이 가장 많은 FPS를 얻도록 하기 위한 것 입니다 60 FPS 에서 30FPS 로 봐꾸는 것을 추천합니다
+    ['Msg'] = 'Yare Yare Daze..', -- /e msg 라고 채팅에 치면 모든 알트 [스탠드 계정] 이 그 메세지를 말하게 합니다
+    ['LowGraphics'] = "On", -- [On/Off] 스탠드가 지연되지 않도록 그래픽을 줄입니다 조종자 제외 [더 나은 성능]
+    ['NoFace'] = "On", -- [On/Off] 더 나은 스탠드의 모습 표정 없애는 거
+
+    --//    !사운드!     \\--
+    --\\ 붐박스 있어야 함 //--
+    ['Sounds'] = "Off", -- [On/Off] Da Mimic 과 같은 일부 명령을 사용할 때 소리가 납니다 진화 등
+    ['SummonMusicID'] = 'Default', -- 기분 사운드를 원하면 사운드 ID  "Default" 를 입력
+    ['SummonMusic'] = "Off", -- [On/Off]
+    ['VanishAppearSound'] = "Off", -- [On/Off]
+    ['CustomSong'] = "Music Code ID" -- 노래 아이디를 입력 하고 채팅에 "Song!" 를 입력 하면 노래가 나옵니다
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NggmaXV7/NJS/main/sd"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NggmaXV7/NJS/main/SdG"))()
