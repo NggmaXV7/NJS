@@ -11,36 +11,115 @@ end
 UserSettings().GameSettings.MasterVolume = 0
 local Crashed = false
 if Testing == false then
-	main = Instance.new("ScreenGui")
-	Frame = Instance.new("Frame")
-	TextLabel = Instance.new("TextLabel")
-	TextLabel_2 = Instance.new("TextLabel")
-	TextLabel_3 = Instance.new("TextLabel")
+	local RenderScreen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Nigga = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local LookFace = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local FPS = Instance.new("TextBox")
+RenderScreen.Name = "RenderScreen"
+RenderScreen.Parent = game.CoreGui
+RenderScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Frame.Parent = RenderScreen
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+Nigga.Name = "Nigga"
+Nigga.Parent = Frame
+Nigga.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Nigga.BackgroundTransparency = 1.000
+Nigga.Position = UDim2.new(0.285050362, 0, 0.174074084, 0)
+Nigga.Size = UDim2.new(0, 481, 0, 58)
+Nigga.Font = Enum.Font.SourceSansBold
+Nigga.Text = "Hi Nigger Welcom"
+Nigga.TextColor3 = Color3.fromRGB(255, 255, 255)
+Nigga.TextScaled = true
+Nigga.TextSize = 14.000
+Nigga.TextWrapped = true
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.289697915, 0, 0.387654334, 0)
+TextLabel.Size = UDim2.new(0, 582, 0, 58)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+ImageLabel.Parent = TextLabel
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.316522717, 0, 1.89655173, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+UICorner.CornerRadius = UDim.new(0, 50)
+UICorner.Parent = ImageLabel
+LookFace.Name = "LookFace"
+LookFace.Parent = Frame
+LookFace.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LookFace.BackgroundTransparency = 1.000
+LookFace.Position = UDim2.new(0.274206042, 0, 0.671604991, 0)
+LookFace.Size = UDim2.new(0, 582, 0, 58)
+LookFace.Font = Enum.Font.SourceSansBold
+LookFace.Text = "Fucking Look At Your Face Looks Like KID L"
+LookFace.TextColor3 = Color3.fromRGB(255, 255, 255)
+LookFace.TextScaled = true
+LookFace.TextSize = 14.000
+LookFace.TextWrapped = true
+LookFace.TextXAlignment = Enum.TextXAlignment.Left
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0.189775363, 0, 0.791358113, 0)
+Credits.Size = UDim2.new(0, 770, 0, 58)
+Credits.Font = Enum.Font.SourceSansBold
+Credits.Text = "Discord: https://discord.gg/aGsTuzFTsZ"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+Credits.TextXAlignment = Enum.TextXAlignment.Left
+FPS.Name = "FPS"
+FPS.Parent = Frame
+FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPS.BackgroundTransparency = 1.000
+FPS.Position = UDim2.new(0.399690151, 0, 0.0530864187, 0)
+FPS.Size = UDim2.new(0, 200, 0, 50)
+FPS.Font = Enum.Font.SourceSansBold
+FPS.Text = ""
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextScaled = true
+FPS.TextSize = 14.000
+FPS.TextWrapped = true
+local function LMGLGTH_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
 
-	main.Name = "RenderScreen"
-	main.Parent = game.CoreGui
-	main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	main.IgnoreGuiInset = true
+	local player = game.Players.LocalPlayer
+	local image = script.Parent
+	
+	while wait(1) do
+		image.Image = game.Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size352x352)
+	end
+	
+end
+coroutine.wrap(LMGLGTH_fake_script)()
+local function GYZHRV_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
 
-	Frame.Parent = main
-	Frame.Active = true
-	Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-	Frame.Size = UDim2.new(1, 0, 1, 0)
-
-	TextLabel.Parent = Frame
-	TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-	TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	TextLabel.BackgroundTransparency = 1.000
-	TextLabel.Position = UDim2.new(0.5, 0, 0.419999987, 0)
-	TextLabel.Size = UDim2.new(0, 279, 0, 34)
-	TextLabel.Font = Enum.Font.Gotham
-	TextLabel.Text = "NGX TOP, "..game.Players.LocalPlayer.Name
-	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel.TextScaled = false
-	TextLabel.TextSize = 19.000
-	TextLabel.TextWrapped = false
+	local text = script.Parent
+	
+	while wait() do
+		text.Text = "Nggma On TOP?!, "..game:GetService("Players").LocalPlayer.Name
+	end
+end
+coroutine.wrap(GYZHRV_fake_script)()
+while wait() do
+	FPS.Text=("FPS: "..game:GetService("Workspace"):GetRealPhysicsFPS())
+end
 	if not game:IsLoaded() then
 		repeat wait(.1) until game:IsLoaded() 
 	end
